@@ -1,0 +1,6 @@
+A = int(input())
+B, C, D, E = map(int, input().split())
+print(int(A>B))
+print(int(A>C))
+print(int(A>D))
+print(int(A>E))
