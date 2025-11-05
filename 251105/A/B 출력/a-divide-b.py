@@ -11,3 +11,4 @@ for _ in range(20):
     else:
         A = n * 10
         print(f"{A//B}", end="")
+        A = A % B
