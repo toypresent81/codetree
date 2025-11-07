@@ -7,6 +7,6 @@ for i in arr:
     else:
         total += i
         cnt += 1
-print(total, total/cnt)  
+print(f"{total} {total/cnt:.1f}")  
 
 
