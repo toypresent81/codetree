@@ -1,7 +1,5 @@
 arr = list(map(int, input().split()))
-index = 0
-for i in arr:
-    index += 1
-    if i % 3 == 0:       
+for i in range(0, len(arr)):
+    if arr[i] % 3 == 0:       
+        print(arr[i-1])
         break
-print(arr[index-2])
