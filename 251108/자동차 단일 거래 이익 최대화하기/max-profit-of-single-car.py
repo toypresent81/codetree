@@ -1,17 +1,12 @@
 n = int(input())
 price = list(map(int, input().split()))
-buy = price[0]
-sell = price[0]
-for i in range(1, n):
-    if buy > price[i]:
-        buy = price[i]
-        min_idx = i
-        sell = price[i]
-        for j in range(min_idx+1, n):
-            if sell < price[j]:
-                sell = price[j]
 
+max_val = 0
+for i in range(n):
+    for j in range(i + 1, n):
+        profit = price[j] - price[i]
 
-profit = sell - buy
-
-print(profit)
+        if profit > max_val:
+            max_val = profit
+    
+print(max_val)
