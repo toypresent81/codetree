@@ -1,7 +1,7 @@
 n = int(input())
 price = list(map(int, input().split()))
 buy = price[0]
-
+sell = price[0]
 for i in range(1, n):
     if buy > price[i]:
         buy = price[i]
