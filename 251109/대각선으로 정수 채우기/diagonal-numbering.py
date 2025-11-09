@@ -1,33 +1,13 @@
 n, m = map(int, input().split())
-arr_2d = [
-    [0 for _ in range(m)] 
-    for _ in range(n)
-]
-count = 1
+arr = [[0] * m for _ in range(n)]
 
-for start_col in range(m):
-    curr_row = 0
-    curr_col = start_col
+num = 1
 
-    while 0 <= curr_col and curr_row < n:
-        arr_2d[curr_row][curr_col] = count
-        
-        curr_row += 1
-        curr_col -= 1
-        count += 1
+for i in range(n + m - 1): # 대각선의 개수,  행(j) + 열 = i (대각선 번호), 
+    for j in range(n):
+        if 0 <= i - j < m: # i - j = 열 번호가 음수가 아니고 m을 넘지 않음
+            arr[j][i - j] = num
+            num += 1
 
-for start_row in range(1, n):
-    curr_row = start_row
-    curr_col = m - 1
-
-    while 0 <= curr_col and curr_row < n:
-        arr_2d[curr_row][curr_col] = count
-        
-        curr_row += 1
-        curr_col -= 1
-        count += 1
-
-for row in range(n):
-    for col in range(m):
-        print(arr_2d[row][col], end = ' ')
-    print()
+for row in arr:
+    print(*row)
