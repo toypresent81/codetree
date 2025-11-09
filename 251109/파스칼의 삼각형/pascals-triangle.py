@@ -1,13 +1,13 @@
 n = int(input())
-arr_2d = [[0 for _ in range(n)] for _ in range(n)]
-for row in range(1, n+1):
-    for col in range(1, row+1):
-        if row == 0 or row == 1 or col == 1:
-            arr_2d[row-1][col-1] = 1
+arr_2d = [[" " for _ in range(n)] for _ in range(n)]
+for row in range(n):
+    for col in range(row + 1):
+        if col == 0 or col == row:
+            arr_2d[row][col] = 1
         else:
-            arr_2d[row-1][col-1] = arr_2d[row-2][col-2] + arr_2d[row-2][col-1]
+            arr_2d[row][col] = arr_2d[row-1][col-1] + arr_2d[row-1][col]
 
-for row in range(1, n+1):
-    for col in range(1, row+1):
-        print(arr_2d[row-1][col-1], end=" ")
+for row in arr_2d:
+    for col in row:
+        print(col, end=" ")
     print()
