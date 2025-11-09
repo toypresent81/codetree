@@ -1,7 +1,4 @@
-arr = [0 for _ in range(10)]
-for i in range(10):
-    char = input()
-    arr[i] = char
+arr = [input() for _ in range(10)]
 a = input()
 
 count = 0
