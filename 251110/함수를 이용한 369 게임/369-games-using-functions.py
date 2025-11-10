@@ -13,14 +13,10 @@ def magic_number(a, b):
 
 
 def three_number(i):
-    if i // 10 == 3 or i % 10 == 3:
-        return True
-    elif i // 10 == 6 or i % 10 == 6:
-        return True
-    elif i // 10 == 9 or i % 10 == 9:
-        return True
-    else:
-        return False
+    for j in str(i):
+        if j == "3" or j == "6" or j == "9":
+            return True            
+    return False
 
 
 magic_number(a, b)
