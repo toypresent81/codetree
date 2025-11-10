@@ -3,7 +3,7 @@ b = input()
 
 count = 0
 for i in a:
-    a = a[1:] + a[0]
+    a = a[-1] + a[:-1]
     count += 1
     if a == b:
         break
