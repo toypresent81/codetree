@@ -10,7 +10,7 @@ def calculate(a, o, c):
     elif o == "*":
         print(f"{a} * {c} = {a*c}")
     elif o == "/":
-        print(f"{a} // {c} = {a//c}")
+        print(f"{a} / {c} = {a//c}")
     else:
         print("False")
 
