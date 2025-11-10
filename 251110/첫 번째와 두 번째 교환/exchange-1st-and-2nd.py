@@ -11,6 +11,7 @@ for i in range(len(arr)):
     else:
         if arr[i] == second:
             arr[i] = first
-        if arr[i] == first:
-            arr[i] = second
+        else: 
+            if arr[i] == first:
+                arr[i] = second
 print("".join(arr))
