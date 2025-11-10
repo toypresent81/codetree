@@ -13,4 +13,5 @@ for i in queries:
     else:
         arr = list(input_str)
         arr.reverse()
+        input_str = "".join(arr)
         print("".join(arr))
