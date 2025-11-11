@@ -18,7 +18,7 @@ for i in range(n):
         end = start + x[i]
     
     for j in range(start, end):
-        blocks[j] += 1
+        blocks[j-1] += 1
 
 count = 0
 for i in blocks:
