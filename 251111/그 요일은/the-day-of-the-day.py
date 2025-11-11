@@ -15,7 +15,7 @@ diff_days = nums_of_days(m2, d2) - nums_of_days(m1, d1)
 
 week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
-if week[diff_days%7] == A:
+if week[diff_days%7] <= A:
     print(diff_days//7 + 1)
 else:
     print(diff_days//7)
