@@ -8,4 +8,4 @@ for i in range(n):
         arr.append(str)
 
 arr.sort()
-print(arr[2])
+print(arr[k-1])
