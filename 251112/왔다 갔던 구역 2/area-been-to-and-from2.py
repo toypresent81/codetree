@@ -6,22 +6,24 @@ for _ in range(n):
     x.append(int(xi))
     dir.append(di)
 
-blocks = [0 for _ in range(30+1)]
+blocks = [0 for _ in range(200+2)]
 
-
-start = 0
-end = 0
+current = 100
 for i in range(n):
     if dir[i] == "L":
-        start = end - x[i]
+        start = current - x[i]
+        end = current
     else:
-        end = start + x[i]
+        start = current
+        end = current + x[i]
     
     for j in range(start, end):
         blocks[j] += 1
+
+    current = end if dir[i] == "R" else start
 
 count = 0
 for i in blocks:
     if i >= 2:
         count += 1
-print(count+1)
+print(count)
