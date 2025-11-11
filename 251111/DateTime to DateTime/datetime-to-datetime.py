@@ -15,4 +15,7 @@ def num_of_times(h, m):
 
 total_days = num_of_days(11, a) - num_of_days(11, 11)
 total_minutes = 24 * 60 * total_days + num_of_times(b, c) - num_of_times(11, 11)
-print(total_minutes)
+if total_minutes < 0:
+    print(-1)
+else:
+    print(total_minutes)
