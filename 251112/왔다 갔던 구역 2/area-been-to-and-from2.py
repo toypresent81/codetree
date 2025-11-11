@@ -6,7 +6,7 @@ for _ in range(n):
     x.append(int(xi))
     dir.append(di)
 
-blocks = [0 for _ in range(20+1)]
+blocks = [0 for _ in range(30+1)]
 
 
 start = 0
@@ -18,7 +18,7 @@ for i in range(n):
         end = start + x[i]
     
     for j in range(start, end):
-        blocks[j-1] += 1
+        blocks[j] += 1
 
 count = 0
 for i in blocks:
