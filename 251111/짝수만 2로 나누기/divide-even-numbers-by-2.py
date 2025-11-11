@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 
 def remain(n, arr):
     for i in range(n):
-        if i % 2 == 0 and arr[i] % 2 == 0:
+        if arr[i] % 2 == 0:
             arr[i] //= 2
 
     return arr
