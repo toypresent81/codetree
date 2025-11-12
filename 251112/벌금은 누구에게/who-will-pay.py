@@ -3,7 +3,7 @@ student = [int(input()) for _ in range(M)]
 
 nums_of_students = [0] * (N+1)
 
-ans = 0
+ans = -1
 for i in range(M):    
     for idx, num in enumerate(student):
         nums_of_students[num] += 1
