@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-MAX_RANGE = 100000
+MAX_RANGE = 1000000
 ans_a = [0] * (MAX_RANGE + 1)
 ans_b = [0] * (MAX_RANGE + 1)
 
