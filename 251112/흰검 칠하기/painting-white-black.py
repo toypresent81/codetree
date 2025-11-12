@@ -1,7 +1,7 @@
 n = int(input())
 
-blocks = [''] * 20002
-current = 10000
+blocks = [''] * 200002
+current = 100000
 
 for _ in range(n):
     distance, direction = input().split()
