@@ -1,0 +1,26 @@
+n = int(input())
+x1, y1, x2, y2 = [], [], [], []
+for _ in range(n):
+    a, b, c, d = map(int, input().split())
+    x1.append(a)
+    y1.append(b)
+    x2.append(c)
+    y2.append(d)
+
+
+
+OFFSET = 100
+plane = [[0] * 201 for _ in range(201)]
+
+for i in range(n):
+    for x in range(x1[i], x2[i]):
+        for y in range(y1[i], y2[i]):
+            plane[x + OFFSET][y + OFFSET] = 1
+
+count = 0
+for i in range(201):
+    for j in range(201):
+        if plane[i][j] == 1:
+            count += 1
+
+print(count)
