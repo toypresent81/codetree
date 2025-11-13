@@ -30,8 +30,8 @@ for i in range(N):
             break
     if found:
         break
-        
-print(time)
+
+print(time if found == True else -1)
 
 
 
